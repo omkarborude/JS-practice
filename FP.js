@@ -86,13 +86,12 @@ const getusername = (username,ID) => console.log('userID: ',ID , 'username :',us
 getusername('omkar',userID(233));
 
 // one
-
 const Increment = (num) => num+1;
 const Decrement = (num) => num-1;
 const Square = (num) => num*num;
 
+
 const compose = (...test) => {
     return (num) => test.reduce((acc , curr) => curr(acc) ,num)
 }
-
 console.log(compose(Decrement,Square,Increment)(8))
